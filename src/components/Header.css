@@ -1,0 +1,145 @@
+header {
+  position: fixed;
+  width: 100%;
+}
+header .desktop-nav {
+  height: 72px;
+  padding: 0px 20px;
+  background-color: #f5f5f4;
+  box-shadow: 0 2px 3px -3px grey;
+}
+@media (min-width: 768px) {
+  header .desktop-nav {
+    padding: 0px 40px;
+  }
+}
+header .desktop-nav .navbar-brand {
+  margin-right: 60px;
+}
+header .desktop-nav .navbar-brand .logo {
+  height: 44px;
+  width: 163px;
+  object-fit: cover;
+}
+header .desktop-nav .nav-item {
+  display: flex;
+  align-items: center;
+}
+header .desktop-nav .nav-item .nav-link {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 300;
+  text-decoration: none;
+  color: #000000;
+}
+header .desktop-nav .nav-item .form-select {
+  width: 84px;
+  border-radius: 0px;
+  background-color: transparent;
+  margin-left: 24px;
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  header .desktop-nav .nav-item .form-select {
+    font-size: 14px;
+  }
+}
+header .desktop-nav .nav-item .form-select :focus {
+  outline: none;
+}
+header .desktop-nav .cart-icon-wrapper {
+  display: flex;
+}
+header .desktop-nav .cart-icon-wrapper .cart-icon {
+  height: 21px;
+  width: 25px;
+}
+header .desktop-nav .cart-icon-wrapper span {
+  margin-top: -5px;
+}
+header .mobile-nav {
+  opacity: 0;
+  transform: translateX(-2000px);
+  overflow: hidden;
+  position: fixed;
+  background-color: #f5f5f4;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  padding: 48px 30px;
+  transition: transform 0.4s cubic-bezier(0.28, 0.47, 0.29, 0.86) 0s,
+    opacity 0.4s ease-in-out 100ms;
+}
+header .mobile-nav.show {
+  transform: translateX(0px);
+  opacity: 1;
+}
+@media (min-width: 768px) {
+  header .mobile-nav.show {
+    width: 50%;
+  }
+}
+header .mobile-nav .mobile-nav-wrapper {
+  position: relative;
+  display: flex;
+  grid-gap: 40px;
+  gap: 40px;
+}
+header .mobile-nav .mobile-nav-wrapper a {
+  color: #000000;
+  font-size: 12px;
+  line-height: 25px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+header .mobile-nav .mobile-nav-wrapper a.active {
+  border-bottom: 1px solid #000000;
+  color: #999999;
+}
+@media (min-width: 768px) {
+  header .mobile-nav .mobile-nav-wrapper a {
+    font-size: 16px;
+    line-height: 35px;
+  }
+}
+header .mobile-nav .mobile-nav-wrapper button {
+  position: absolute;
+  right: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+  border: 1px solid #999999;
+}
+header .mobile-nav .mobile-nav-wrapper button svg {
+  width: 15px;
+  height: 15px;
+}
+header .mobile-nav .categories-wrapper {
+  padding-top: 50px;
+}
+@media (min-width: 768px) {
+  header .mobile-nav .categories-wrapper {
+    padding-top: 90px;
+  }
+}
+header .mobile-nav .categories-wrapper a {
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 25px;
+  color: #000000;
+}
+@media (min-width: 768px) {
+  header .mobile-nav .categories-wrapper a {
+    margin-bottom: 35px;
+  }
+}
