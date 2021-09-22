@@ -35,10 +35,10 @@ export const Productionpg = () => {
 
   const pushToCart = (e) => {
     e.preventDefault();
-    const duplicate = cart.find((c) => c.id === cartItem.id);
+    const duplicate = cart.find((car) => car.id === cartItem.id);
     if (duplicate) {
-      const newCart = cart.map((c) =>
-        c.id === cartItem.id ? { ...c, quantity: c.quantity + 1 } : c
+      const newCart = cart.map((car) =>
+        car.id === cartItem.id ? { ...car, quantity: car.quantity + 1 } : car
       );
 
       updateCart(newCart);
