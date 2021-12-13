@@ -6,7 +6,6 @@ import { getCurrency } from "./Queries/ProdQ";
 import { useQuery } from "@apollo/client";
 import cx from "classnames";
 
-
 export function Cart() {
   const {
     currency,
@@ -36,7 +35,9 @@ export function Cart() {
 
   function decreaseQuantity(id) {
     const newCart = cart.map((car) =>
-      car.id === id ? { ...car, quantity: car.quantity > 1 ? car.quantity - 1 : 1 } : car
+      car.id === id
+        ? { ...car, quantity: car.quantity > 1 ? car.quantity - 1 : 1 }
+        : car
     );
     updateCart(newCart);
   }
@@ -135,10 +136,14 @@ export function Cart() {
               {calculateTotal()}.00
             </span>
           </div>
-          <button className={cx("btn outline", { disabled: !finalCart?.length })}>
+          <button
+            className={cx("btn outline", { disabled: !finalCart?.length })}
+          >
             Make this a subscription (Save 20%)
           </button>
-          <button className={cx("btn solid", { disabled: !finalCart?.length })}>proceed to checkout</button>
+          <button className={cx("btn solid", { disabled: !finalCart?.length })}>
+            proceed to checkout
+          </button>
         </div>
       </div>
     </Modal>
